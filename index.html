@@ -7,14 +7,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    This is my github pages.
+    
     <div id = "app">
         <p> {{ msg }} </p>
     </div>
     <script>
-        var vm = new Vue({
+        var app = new Vue({
             el: '#app',
-            data: data
+            data: {
+                msg: 'hello word'
+            }
         })
     </script>
 </body>
