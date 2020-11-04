@@ -16,16 +16,19 @@
 
     <div id="app">
         <el-row>
-            <el-divider content-position="left"><h1>{{ msg }}</h1></el-divider>
+            <el-divider content-position="left">
+                <h1>{{ msg }}</h1>
+            </el-divider>
         </el-row>
-        
+
         <el-row>
             <el-button type="primary" v-on:click="goToDrawio">Drawio</el-button>
         </el-row>
-        
+
         <el-row>
             <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</el-button>
         </el-row>
+
     </div>
     <script>
         var app = new Vue({
@@ -37,12 +40,17 @@
                 goToDrawio: function () {
                     window.location.href = 'https://wuhaobest1.github.io/drawio/src/main/webapp/index.html'
                 },
-                goToMarkdownEditor: function() {
+                goToMarkdownEditor: function () {
                     window.location.href = 'https://wuhaobest1.github.io/editor/index.html'
                 }
             }
         })
     </script>
+    <style scoped>
+        .el-row {
+            margin-bottom: 20px;
+        }
+    </style>
 </body>
 
 </html>
