@@ -16,11 +16,13 @@
 
     <div id="app">
         <el-row>
-            <el-divider content-position="left">{{ msg }}</el-divider>
+            <el-divider content-position="left"><h1>{{ msg }}</h1></el-divider>
         </el-row>
+        
         <el-row>
             <el-button type="primary" v-on:click="goToDrawio">Drawio</el-button>
         </el-row>
+        
         <el-row>
             <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</el-button>
         </el-row>
@@ -29,7 +31,7 @@
         var app = new Vue({
             el: '#app',
             data: {
-                msg: 'Menu'
+                msg: 'Toolkit'
             },
             methods: {
                 goToDrawio: function () {
