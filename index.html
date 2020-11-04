@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toolkit</title>
+    <!-- 引入element样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入element组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 
 <body>
 
     <div id="app">
-        <h1> {{ msg }} </h1>
-        <button v-on:click="goToDrawio">Drawio</button>
+        <h1>  </h1>
+        <el-divider content-position="left">{{ msg }}</el-divider>
+        <el-button type="primary" v-on:click="goToDrawio">Drawio</button>
+        <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</button>
     </div>
     <script>
         var app = new Vue({
@@ -23,6 +29,9 @@
             methods: {
                 goToDrawio: function () {
                     window.location.href = 'https://wuhaobest1.github.io/drawio/src/main/webapp/index.html'
+                },
+                goToMarkdownEditor: function() {
+                    window.location.href = ''
                 }
             }
         })
