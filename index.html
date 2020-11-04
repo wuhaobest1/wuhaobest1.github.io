@@ -15,10 +15,15 @@
 <body>
 
     <div id="app">
-        <h1>  </h1>
-        <el-divider content-position="left">{{ msg }}</el-divider>
-        <el-button type="primary" v-on:click="goToDrawio">Drawio</button>
-        <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</button>
+        <el-row>
+            <el-divider content-position="left">{{ msg }}</el-divider>
+        </el-row>
+        <el-row>
+            <el-button type="primary" v-on:click="goToDrawio">Drawio</el-button>
+        </el-row>
+        <el-row>
+            <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</el-button>
+        </el-row>
     </div>
     <script>
         var app = new Vue({
