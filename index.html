@@ -4,32 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Toolkit</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
 </head>
 
 <body>
 
     <div id="app">
-        <p> {{ msg }} </p>
-        <div id="editor"></div>
+        <h1> {{ msg }} </h1>
+        <button v-on:click="goToDrawio">Drawio</button>
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                msg: 'hello word'
+                msg: 'Menu'
+            },
+            methods: {
+                goToDrawio: function () {
+                    window.location.href = 'https://wuhaobest1.github.io/drawio/src/main/webapp/index.html'
+                }
             }
         })
-
-        const editor = new toastui.Editor({
-            el: document.querySelector('#editor'),
-            previewStyle: 'vertical',
-            height: '500px',
-            initialValue: content
-        });
-
     </script>
 </body>
 
