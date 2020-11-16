@@ -29,6 +29,10 @@
             <el-button type="primary" v-on:click="goToMarkdownEditor">MarkdownEditor</el-button>
         </el-row>
 
+        <el-row>
+            <el-button type="primary" v-on:click="goToEBook">Current Reading</el-button>
+        </el-row>
+
     </div>
     <script>
         var app = new Vue({
@@ -42,6 +46,9 @@
                 },
                 goToMarkdownEditor: function () {
                     window.location.href = 'https://wuhaobest1.github.io/editor/index.html'
+                },
+                goToEBook: function () {
+                    window.location.href = 'https://wuhaobest1.github.io/editor/ebook/神经网络与深度学习.pdf'
                 }
             }
         })
